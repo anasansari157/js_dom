@@ -1,6 +1,28 @@
 var quotes;
-
+document.getElementById("quoter").style.fontSize = "20px";
 // Write your code here
+document.addEventListener("keydown", function(event) {
+    if (event.which == 32) {
+        var len = quotes.length;
+        var mathRandom = Math.floor(Math.random()*len)+1;
+        document.getElementById("quote").innerText = `"${quotes[mathRandom].quoteText}"`;
+        document.getElementById("quoter").textContent = `- ${quotes[mathRandom].quoteAuthor}`;
+    }
+        // var beforeClass = window.getComputedStyle(document.querySelector('.home-title span'), ':before');
+        // beforeClass.style.animationName = "a-ltr-before";
+
+        // var afterClass = window.getComputedStyle(document.querySelector('.home-title span'), ':after');
+        // afterClass.style.animationName = "a-ltr-after";
+
+
+        // var afterClass = document.querySelector("span");
+        // afterClass.pseudoStyle("after","animation-name","a-ltr-after");
+
+
+//     expect(browser.executeScript("return window.getComputedStyle(document.querySelector('.home-title>span'), ':before').getPropertyValue('animation-name')")).toEqual('a-ltr-before');
+//     expect(browser.executeScript("return window.getComputedStyle(document.querySelector('.home-title>span'), ':after').getPropertyValue('animation-name')")).toEqual('a-ltr-after');
+
+});
 
 
 

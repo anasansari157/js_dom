@@ -11,11 +11,13 @@
         font-family: sans-serif;
         color: #333;
       }
+      
       body {
         max-width: 500px;
         margin: 0 auto;
         padding: 0 15px;
       }
+
       div,
       article {
         padding: 10px;
@@ -46,7 +48,29 @@
     <div class="demo-query-all">Access me by query all (1)</div>
     <div class="demo-query-all">Access me by query all (2)</div>
     <script>
-      // your code goes here
+      
+      document.querySelector("#demo").style.border = "1px solid purple";
+      
+
+      let classDemoBorder = document.getElementsByClassName("demo");
+			for (let i = 0; i < classDemoBorder.length; i++) {
+				classDemoBorder[i].style.border = "1px solid orange";
+			}
+      
+			let articleBorder = document.getElementsByTagName("article");
+			for (let i = 0; i < articleBorder.length; i++) {
+				articleBorder[i].style.border = "1px solid blue";
+			}
+
+
+      let demoQuery = document.querySelector("#demo-query");
+			demoQuery.style.border = "1px solid grey";
+
+
+      let demoQueryall = document.querySelectorAll(".demo-query-all");
+			for (let i = 0; i < demoQueryall.length; i++) {
+				demoQueryall[i].style.border = "1px solid green";
+			}
     </script>
   </body>
 </html>
