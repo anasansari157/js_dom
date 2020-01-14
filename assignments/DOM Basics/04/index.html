@@ -12,5 +12,23 @@
       <li>Favorites: <span id="favorites"></span></li>
       <li>Hometown: <span id="hometown"></span></li>
     </ul>
+
+    <script>
+
+
+    	let font = (document.querySelector("body").style.fontFamily = "Arial, sans-serif");
+			document.getElementById("nickname").textContent = "Anas Ansari";
+			document.getElementById("favorites").textContent = "Books";
+			document.getElementById("hometown").textContent = "Lucknow";
+			let list = document.querySelectorAll("li");
+			for (let i = 0; i < list.length; i++) {
+				list[i].className = "listitem";
+				list[i].style.color = "red";
+			}
+			let image = document.createElement("img");
+			image.src = "https://iili.io/HhKEBI.jpg";
+			image.style.height = "200px";
+			document.body.appendChild(image);
+    </script>
   </body>
 </html>

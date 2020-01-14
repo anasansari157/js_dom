@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mouse Move</title>
+
+    <style>
+        html{
+            overflow-y: hidden;
+        }
+
+        .container {
+        width: 500px;
+        height: 500px;
+        background: rgba(20,20,20,0.5);
+        margin:5% auto;
+        border-radius: 50%;
+        border: 2px solid black;
+        box-shadow: 13px 2px 42px 0px rgba(0,0,0,0.75);
+        display: flex;
+        justify-content: center;
+        }
+
+        .mainText{
+        pointer-events: none;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        text-align: center;
+        font-size: 280%;
+        margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <h5 class = "mainText">Coordinates of your mouse: <br> Hover please</h5>
+    </div>
+
+    <script>
+
+        let text  = document.querySelector('.mainText');
+        let mainContainer  = document.querySelector('.container');
+
+        mainContainer.addEventListener("mousemove", runEvent);
+        //event handler
+        function runEvent(e){
+        e.preventDefault();
+        //print Coordinates of the mouse on move on the targeted element: 
+        text.innerHTML = `MouseX: ${e.offsetX} <br> MouseY: ${e.offsetY}`;
+        //change body background color taking the coordinates as values of rgb:
+        document.body.style.backgroundColor = `rgb(${e.offsetX}, 180, ${e.offsetY})`;
+        }
+    </script>
+</body>
+</html>

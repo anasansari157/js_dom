@@ -9,8 +9,41 @@
   <body>
     <body>
       <h1>Document Object Model</h1>
-    <script>
-      // your code goes here
-    </script>
-  </body>
+  
+  
+      <script>
+        //Is there any other way to create the contents in HTML.
+  
+        let pElement = document.createElement('p');      
+        pElement.textContent = "Hello Javascript!";
+        pElement.innerHTML += " I love <strong>Javascript</strong>."
+        document.body.appendChild(pElement);
+  
+  
+  
+        let uList = document.createElement('ul');
+        let todoArray = ['Buy groceries', 'Feed the cat', 'Do laundry'];
+  
+        for (let i = 0; i < todoArray.length; i++) {
+          let liList = document.createElement('li');
+          liList.textContent = todoArray[i];
+          uList.append(liList);
+        }
+  
+        document.body.appendChild(uList);
+  
+  
+  
+        var liList = document.createElement('li');
+        liList.innerHTML = "Buy Milk";
+        uList.appendChild(liList);
+  
+  
+  
+        uList.childNodes[1].remove();
+  
+  
+  
+      </script>
+    </body>
 </html>

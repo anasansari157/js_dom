@@ -38,6 +38,47 @@
     const h1 = document.getElementsByTagName("h1")[0];
     const p = document.getElementsByTagName("p")[0];
     const ul = document.getElementsByTagName("ul")[0];
-    // Your code goes here
+    
+
+    console.dir(document);
+    console.dir(document.documentElement);
+    console.dir(document.head);
+    console.dir(document.title);
+    console.dir(document.body);
+
+    ul.firstElementChild.style.background = 'red';
+
+
+
+    var li = document.querySelectorAll('li');
+    console.dir(li);
+
+    for(let li of li) {
+      li.style.background='orange';
+    }
+
+
+    li[(li.length-1)].style.background = "pink";
+
+    var middleLi = li[Math.floor((li.length)/2)];
+    middleLi.nextElementSibling.style.background = 'aquamarine';
+    middleLi.previousElementSibling.style.background = 'coral';
+
+
+
+
+
+    //THIS WORKS TOO
+    // ul.firstElementChild.style.backgroundColor = "#27D2C2";
+		// let list = document.querySelectorAll("li");
+
+		// list.forEach(i => {
+		// 	i.style.backgroundColor = "#17B2D5";
+		// });
+
+		// list[list.length - 1].style.backgroundColor = "#EE10B7";
+		// list[Math.floor(list.length / 2)].style.backgroundColor = "#3D9F31";
+    //     list[Math.floor(list.length / 2)].previousElementSibling.style.backgroundColor = "aquamarine";
+    //     list[Math.floor(list.length / 2)].nextElementSibling.style.backgroundColor = "coral";
   </script>
 </html>
